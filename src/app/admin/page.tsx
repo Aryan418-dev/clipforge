@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 type Entry = {
   id: string;
@@ -45,7 +45,7 @@ export default function AdminPage() {
 
   function exportCsv() {
     if (!entries.length) return;
-    const headers = [
+    const headers: (keyof Entry)[] = [
       "id",
       "name",
       "email",
@@ -59,7 +59,7 @@ export default function AdminPage() {
     const rows = entries.map((e) =>
       headers
         .map((h) => {
-          const val = (e as any)[h] ?? "";
+          const val = e[h] ?? "";
           return `"${String(val).replace(/"/g, '""')}"`;
         })
         .join(",")

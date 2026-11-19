@@ -76,9 +76,9 @@ export default function WaitlistForm({ source = "landing" }: { source?: string }
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#28C840]/20 text-[#28C840]">
           <CheckIcon className="h-6 w-6" />
         </div>
-        <h3 className="font-headline text-xl text-white mb-2">You're on the list</h3>
+        <h3 className="font-headline text-xl text-white mb-2">You are on the list</h3>
         <p className="text-on-surface text-sm leading-relaxed max-w-sm mx-auto">
-          Thanks for joining. We'll reach out as we open the Founding Creator Program and early access. Keep an eye on your inbox.
+          Thanks for joining. We will reach out as we open the Founding Creator Program and early access. Keep an eye on your inbox.
         </p>
       </div>
     );
